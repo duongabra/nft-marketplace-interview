@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NFT Marketplace Demo
 
-## Getting Started
+A modern NFT marketplace built with Next.js, TypeScript, and Wagmi for Ethereum wallet integration. This project demonstrates core blockchain functionalities including wallet connection, NFT transactions, and transaction history tracking.
 
-First, run the development server:
+![image](https://github.com/user-attachments/assets/b2283223-af4d-4ae8-99b1-1ce97ec58cb5)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ⚡ Next.js 14 with App Router
+- 🔗 Ethereum wallet integration (MetaMask, WalletConnect, etc.)
+- 💳 Simulated NFT purchases with real blockchain transactions
+- 📊 Transaction history tracking
+- 🎨 Responsive design with Tailwind CSS
+- 🔒 Type-safe development with TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- **Frontend Framework:** Next.js 14
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Web3 Integration:** wagmi, viem
+- **State Management:** React Context
+- **UI Components:** Headless UI
+- **Toast Notifications:** React Hot Toast
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   - git clone git@github.com:duongabra/nft-marketplace-interview.git
+2. Install dependencies:
+   - npm install or yarn install
+3. Set up environment variables:
+   - NEXT_PUBLIC_ALCHEMY_API_KEY=QzpWk17gtmlwcAShDfE3WP-bqOKPwc2o (alchemy key,you can get one here: https://www.alchemy.com/)
+     NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=fda67b116b1a012369bc8ebabce923c0 (wallet connect project id key,you can get one here: https://cloud.reown.com/)
+     NEXT_PUBLIC_SELLER_ADDRESS="0x024e99A9E5DB73f24AC6fBA38Ef47A659ddDE95C" (wallet address seller,money when buy nft send here)
+4. Start the development server:
+   - npm run dev
+  
+5. set up your wallet:
+   - change your current network to sepolia,or you just need click to connect wallet and auto add sepolia network
+   - fauce ETH testnet here: https://cloud.google.com/application/web3/faucet/ethereum/sepolia 
