@@ -44,7 +44,7 @@ export default function NFTCard({ nft }: NFTCardProps) {
                         className="object-cover"
                         priority={false}
                     />
-                    <div className={`absolute top-2 right-2 px-2 py-1 rounded-full text-sm ${hasPurchased ? 'bg-red-500' : 'bg-green-500'
+                    <div className={`absolute top-2 left-2 px-2 py-1 rounded-full text-sm ${hasPurchased ? 'bg-red-500' : 'bg-green-500'
                         } text-white`}>
                         {hasPurchased ? 'Sold Out' : 'Available'}
                     </div>
