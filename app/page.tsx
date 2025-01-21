@@ -25,9 +25,9 @@ export default function HomePage() {
   return (
     <div className="max-w-[1440px] mx-auto px-4 py-8">
       <section className="mb-8">
-        <p className="text-lg text-gray-600">
+        <div className="text-lg text-gray-600">
           Discover, collect, and sell extraordinary NFTs
-        </p>
+        </div>
       </section>
 
       <section className="mb-8">

@@ -21,7 +21,7 @@ export default function TransactionHistoryModal({ isOpen, onClose }: { isOpen: b
                 </div>
 
                 {transactions.length === 0 ? (
-                    <p className="text-gray-500 text-center py-4">No transactions yet</p>
+                    <div className="text-gray-500 text-center py-4">No transactions yet</div>
                 ) : (
                     <div className="space-y-4">
                         {transactions.map((tx) => (
@@ -37,7 +37,7 @@ export default function TransactionHistoryModal({ isOpen, onClose }: { isOpen: b
                                             {tx.status.charAt(0).toUpperCase() + tx.status.slice(1)}
                                         </span>
                                     </div>
-                                    <p className="font-bold text-green-600">{tx.price} ETH</p>
+                                    <div className="font-bold text-green-600">{tx.price} ETH</div>
                                 </div>
 
                                 <div className="space-y-2 text-sm">

@@ -52,9 +52,9 @@ export default function NFTCard({ nft }: NFTCardProps) {
 
                 <div className="p-4">
                     <h3 className="text-lg font-semibold mb-2 truncate"><TruncatedText text={nft.name} /></h3>
-                    <p className="text-gray-600 mb-2 text-sm truncate">
+                    <div className="text-gray-600 mb-2 text-sm truncate">
                         Creator: <TruncatedText text={nft.creator} />
-                    </p>
+                    </div>
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-1">
                             <svg className="w-4 h-4" viewBox="0 0 33 53" fill="none">

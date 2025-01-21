@@ -81,12 +81,12 @@ export default function NFTDetailView({ nft }: NFTDetailViewProps) {
             <div className="space-y-4">
                 <h1 className="text-3xl font-bold"><TruncatedText text={nft.name} /></h1>
                 <FavoriteButton nftId={nft.id} />
-                <p className="text-gray-600">{nft.description}</p>
+                <div className="text-gray-600">{nft.description}</div>
 
                 <div className="flex justify-between items-center py-4 border-y border-gray-200">
                     <div>
-                        <p className="text-sm text-gray-500">Current Price</p>
-                        <p className="text-2xl font-bold">{nft.price} ETH</p>
+                        <div className="text-sm text-gray-500">Current Price</div>
+                        <div className="text-2xl font-bold">{nft.price} ETH</div>
                     </div>
                     {renderButton()}
                 </div>
@@ -95,16 +95,16 @@ export default function NFTDetailView({ nft }: NFTDetailViewProps) {
                     <h2 className="text-lg font-semibold mb-2">Details</h2>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <p className="text-sm text-gray-500">Creator</p>
-                            <p className="text-sm font-medium">
+                            <div className="text-sm text-gray-500">Creator</div>
+                            <div className="text-sm font-medium">
                                 <TruncatedText text={nft.creator} />
-                            </p>
+                            </div>
                         </div>
                         <div>
-                            <p className="text-sm text-gray-500">Token ID</p>
-                            <p className="text-sm font-medium">
+                            <div className="text-sm text-gray-500">Token ID</div>
+                            <div className="text-sm font-medium">
                                 <TruncatedText text={nft.id} />
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
