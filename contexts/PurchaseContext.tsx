@@ -23,7 +23,6 @@ export function PurchaseProvider({ children }: { children: React.ReactNode }) {
         }
     }, [])
 
-    // Sử dụng useCallback để tránh tạo function mới mỗi lần render
     const markNFTAsPurchased = useCallback((nftId: string) => {
         setPurchasedNFTs(prev => {
             if (prev.includes(nftId)) return prev

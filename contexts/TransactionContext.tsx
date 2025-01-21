@@ -38,20 +38,17 @@ export function TransactionProvider({ children }: { children: React.ReactNode })
 
     const addTransaction = (transaction: Omit<Transaction, 'id' | 'timestamp'>) => {
         setTransactions(prev => {
-            // Kiểm tra xem transaction đã tồn tại chưa (dựa vào txHash)
             const existingIndex = prev.findIndex(tx => tx.txHash === transaction.txHash)
 
             let updated: Transaction[]
             if (existingIndex >= 0) {
-                // Nếu transaction đã tồn tại, cập nhật status
                 updated = [...prev]
                 updated[existingIndex] = {
                     ...updated[existingIndex],
                     ...transaction,
-                    timestamp: Date.now() // Cập nhật timestamp
+                    timestamp: Date.now()
                 }
             } else {
-                // Nếu là transaction mới, thêm vào đầu danh sách
                 const newTransaction = {
                     ...transaction,
                     id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -60,7 +57,6 @@ export function TransactionProvider({ children }: { children: React.ReactNode })
                 updated = [newTransaction, ...prev]
             }
 
-            // Lưu vào localStorage
             try {
                 localStorage.setItem('nft-transactions', JSON.stringify(updated))
             } catch (error) {

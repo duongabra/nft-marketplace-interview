@@ -8,7 +8,6 @@ interface SearchBarProps {
 export default function SearchBar({ onSearch }: SearchBarProps) {
     const [searchQuery, setSearchQuery] = useState('')
 
-    // Gọi onSearch ngay khi searchQuery thay đổi
     useEffect(() => {
         onSearch(searchQuery)
     }, [searchQuery, onSearch])

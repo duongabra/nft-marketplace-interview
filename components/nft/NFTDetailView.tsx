@@ -16,7 +16,7 @@ interface NFTDetailViewProps {
         image: string
         price: string
         creator: string
-        status: 'available' | 'sold'  // Thêm type cụ thể cho status
+        status: 'available' | 'sold'
     }
 }
 

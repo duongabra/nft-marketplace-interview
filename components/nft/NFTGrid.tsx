@@ -25,17 +25,12 @@ export default function NFTGrid({ searchQuery, filters }: NFTGridProps) {
 
     console.log('filters', filters)
 
-    // Tạo một bản sao của mảng NFTs để xử lý
     const processNFTs = () => {
-        // Bước 1: Filter
         let processed = nfts.filter(nft => {
-            // Tìm kiếm theo tên
-
             if (searchQuery && !nft.name.toLowerCase().includes(searchQuery.toLowerCase())) {
                 return false;
             }
 
-            // Lọc theo trạng thái - kiểm tra cả trạng thái mua
             if (filters?.status) {
                 const actualStatus = isPurchased(nft.id) ? 'sold' : nft.status;
 
@@ -44,12 +39,10 @@ export default function NFTGrid({ searchQuery, filters }: NFTGridProps) {
                 }
             }
 
-            // Lọc theo loại
             if (filters?.type && nft.type !== filters.type) {
                 return false;
             }
 
-            // Lọc theo giá
             if (filters?.priceRange) {
                 const price = parseFloat(nft.price);
 
@@ -72,7 +65,7 @@ export default function NFTGrid({ searchQuery, filters }: NFTGridProps) {
             return true;
         });
 
-        // Bước 2: Sort
+
         if (filters?.sortBy) {
             processed.sort((a, b) => {
                 switch (filters.sortBy) {

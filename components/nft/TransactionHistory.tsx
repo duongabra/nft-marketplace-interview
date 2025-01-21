@@ -39,7 +39,6 @@ export default function TransactionHistory({ nftId }: { nftId: string }) {
                     </div>
                 </div>
 
-                {/* Buy Transaction - Chỉ hiển thị khi đã mua */}
                 {hasPurchased && (
                     <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
                         <div>

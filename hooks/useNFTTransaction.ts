@@ -32,7 +32,6 @@ export function useNFTTransaction(price: string, nftId: string) {
     const statusUpdated = useRef(false)
     const toastIdRef = useRef<string | null>(null)
 
-    // Xử lý transaction pending
     useEffect(() => {
         if (hash && !transactionAdded.current) {
             const toastId = `purchase-${hash}`
@@ -52,7 +51,6 @@ export function useNFTTransaction(price: string, nftId: string) {
         }
     }, [hash, buyerAddress, nftId, price, addTransaction])
 
-    // Xử lý transaction success
     useEffect(() => {
         if (isSuccess && hash && !statusUpdated.current) {
             const toastId = toastIdRef.current || `purchase-${hash}`
@@ -71,7 +69,6 @@ export function useNFTTransaction(price: string, nftId: string) {
         }
     }, [isSuccess, hash, buyerAddress, nftId, price, addTransaction, markNFTAsPurchased])
 
-    // Xử lý transaction error
     useEffect(() => {
         if (writeError && hash && !statusUpdated.current) {
             const toastId = toastIdRef.current || `purchase-${hash}`
@@ -89,7 +86,6 @@ export function useNFTTransaction(price: string, nftId: string) {
         }
     }, [writeError, hash, buyerAddress, nftId, price, addTransaction])
 
-    // Cleanup toasts khi unmount
     useEffect(() => {
         return () => {
             if (toastIdRef.current) {
