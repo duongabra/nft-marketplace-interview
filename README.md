@@ -23,6 +23,7 @@ A modern NFT marketplace built with Next.js, TypeScript, and Wagmi for Ethereum 
 - **State Management:** React Context
 - **UI Components:** Headless UI
 - **Toast Notifications:** React Hot Toast
+- **This project AI powered application to speed up development includes cursor and claude sonnet 3.5** 🗿
 
 ## 📦 Installation
 
